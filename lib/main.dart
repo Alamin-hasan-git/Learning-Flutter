@@ -13,10 +13,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: 
-           container(
-             height: 200,
-             width:200,
-             color:Colors.red,
+                 
+          
              ),    
         ),
       ),
