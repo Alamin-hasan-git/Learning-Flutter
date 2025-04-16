@@ -12,8 +12,12 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        body: 
+           container(
+             height: 200,
+             width:200,
+             color:Colors.red,
+             ),    
         ),
       ),
     );
