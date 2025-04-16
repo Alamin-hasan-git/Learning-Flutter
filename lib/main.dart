@@ -1,25 +1,34 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: 
-           container(
-             height: 200,
-             width:200,
-             color:Colors.red,
-             ),    
-        ),
+    return MaterialApp(home: HomeScreen(), debugShowCheckedModeBanner: false);
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purpleAccent,
+        title: Text('My App', textAlign: TextAlign.center),
+        leading: Icon(Icons.home),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.logout), iconSize: 25),
+        ],
       ),
+      body: Container(height: 100, width: 100, color: Colors.purpleAccent),
     );
   }
 }
