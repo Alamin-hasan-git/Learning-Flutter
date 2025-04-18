@@ -1,34 +1,48 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+@immutable
 class MyApp extends StatelessWidget {
+  
   MyApp({super.key});
-
+  List names = [
+    "Alamin",
+    "Lajim",
+    "Asif",
+    "Toha",
+    "Siam",
+    "Mamun",
+    "Rashed",
+    "Sana",
+    "Robi",
+  ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeScreen(), debugShowCheckedModeBanner: false);
-  }
-}
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+       
+                                 //list view for counting number
+      //  body: ListView.builder(
+      //   itemCount: 100,
+      //   itemBuilder: (context, index) => ListTile(
+      //   title: Text(index.toString()),
+      //  ),),
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purpleAccent,
-        title: Text('My App', textAlign: TextAlign.center),
-        leading: Icon(Icons.home),
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.logout), iconSize: 25),
-        ],
+                                 // list view for list of names......
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder:
+              (context, index) => ListTile(
+                title: Text(names[index])
+                ),
+        ),
       ),
-      body: Container(height: 100, width: 100, color: Colors.purpleAccent),
     );
   }
 }
+
