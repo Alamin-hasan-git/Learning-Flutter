@@ -5,7 +5,6 @@ void main() {
   runApp(MyApp());
 }
 
-@immutable
 class MyApp extends StatelessWidget {
   
   MyApp({super.key});

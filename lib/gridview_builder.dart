@@ -7,7 +7,7 @@ void main() {
 
 @immutable
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4), //how many rows i want
           itemBuilder: (context, index) => Container(
             color: Colors.purple[300],
-            margin: EdgeInsets.all(3),
+            margin: EdgeInsets.all(2),
           ),),
       ),
     );
