@@ -23,8 +23,22 @@ class MyApp extends StatelessWidget {
       //   '/secondpage':(context) =>Secondpage(),
       //   '/thirdpage' :(context) => ThirdPage(),
       // },
+
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.purple[200],
+          leading: Icon(Icons.home),
+          title: Text("yee mera app hain"),
+          actions: [
+            IconButton(onPressed: () {}, icon:Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.menu))
+          ],
+        ),
+      ),
     );
 
-    home
+   
+
+   
   }
 }

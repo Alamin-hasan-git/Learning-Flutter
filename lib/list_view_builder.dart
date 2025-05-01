@@ -6,7 +6,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  
   MyApp({super.key});
   List names = [
     "Alamin",
